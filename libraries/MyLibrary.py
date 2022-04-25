@@ -10,7 +10,8 @@ class MyLibrary:
     def example_python_keyword(self):
         logger.info("This is Python!")
 
-    def readFile(self,path=''):
+    def readFile(self):
+        path = self.FileLocation()
         if path == '':
             path = os.getcwd()
         file = pd.read_excel(path,sheet_name='Sheet1',skiprows=[0],usecols="A,B,C")
@@ -80,3 +81,10 @@ class MyLibrary:
 
         res = month_name + ' ' + day + ', ' + current_year
         return res
+    
+    def FileLocation(self,path='.\FileCalendarLocation.txt'):
+        with open(path, 'r') as f:
+            first_line = f.readline()
+        
+        txt= first_line.split("=",1)[1]
+        return txt

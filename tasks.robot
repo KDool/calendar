@@ -2,7 +2,6 @@
 Documentation     Template robot main suite.
 Library           Collections
 Library           MyLibrary
-Resource          keywords.robot
 Variables         MyVariables.py
 Library           RPA.Windows
 Library    RPA.Desktop
@@ -11,13 +10,15 @@ Library    RPA.Desktop
 # Variables
 *** Tasks ***
 Task1
-    
-    ${mlist}    Read File    lichTuanBanHanh_18042022_1017.xlsx
+    ${mlist}    Read File
     FOR    ${element}    IN    @{mlist}
         Log    ${element}
     END
-    # Event to Calendar    ${element}
-    Windows Search    Calendar
+
+    Press Keys    cmd  r
+    Type Text    outlookcal:
+    Press Keys    enter
+    Sleep    2
     FOR    ${element}    IN    @{mlist}
         Event to Calendar    ${element}
         Sleep    0.5
@@ -49,3 +50,6 @@ Event to Calendar
     Type Text    ${element}[2]
     Sleep    1.5
     Press Keys    ctrl  s
+
+
+    
