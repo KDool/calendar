@@ -1,0 +1,1 @@
+.\rcc --task "Run all tasks" run
