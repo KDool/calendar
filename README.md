@@ -1,27 +1,12 @@
-# README for the robot
+# README for the Calendar update robot
 
 Describe your robot here. E.g., what it does, what the requirements are, how to run it.
 
 ## Development guide
+To Run the Robot, open and execute the run.bat file.
 
-Run the robot locally:
-
-```
-rcc run
-```
-
-Provide access credentials for Control Room connectivity:
-
-```
-rcc configure credentials <your_credentials>
-```
-
-Upload to Control Room:
-
-```
-rcc cloud push --workspace <workspace_id> --robot <robot_id>
-```
-
+If local have installed Conda before, skip line 1 in file run.bat and run
+Else Run run.bat normally
 ### Suggested directory structure
 
 The directory structure given by the template:
@@ -56,11 +41,5 @@ Logs and artifacts are stored in `output` by default - see `robot.yaml` for conf
 Learn how to [handle variables and secrets](https://robocorp.com/docs/development-guide/variables-and-secrets/secret-management).
 
 ### Configuration
+Change the location of the calendar Excel file in FileCalendarLocation.txt
 
-Give the task name and startup commands in `robot.yaml` with some additional configuration. See [Docs](https://robocorp.com/docs/setup/robot-structure#robot-configuration-file-robot-yaml) for more.
-
-Put all the robot dependencies in `conda.yaml`. These are used for managing the execution environment.
-
-### Additional documentation
-
-See [Robocorp Docs](https://robocorp.com/docs/) for more documentation.
