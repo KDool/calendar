@@ -1,6 +1,6 @@
 # README for the Calendar update robot
 
-Describe your robot here. E.g., what it does, what the requirements are, how to run it.
+This is a robot to auto extract the Schedule from the Excel file, and then update to your Calendar Outlook/Gmail.
 
 ## Development guide
 To Run the Robot, open and execute the run.bat file.
